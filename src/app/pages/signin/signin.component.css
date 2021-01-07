@@ -1,0 +1,19 @@
+.signin-container {
+  margin-top: 15%;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.signin-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+.signin-subtitle {
+  text-align: center;
+}
+
+.error-message {
+  color: #df546a;
+}

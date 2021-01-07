@@ -1,0 +1,34 @@
+<div fxLayout="column">
+  <!-- navigation -->
+  <nav fxFlex>
+    <mat-toolbar>
+      <!-- navbar container -->
+      <div class="navbar-container">
+        <!-- logo -->
+        <button class="logo" routerLink="/nodebucket" mat-button>nodebucket</button>
+        <button class="navbar-link" routerLink="/home" mat-button>Home</button>
+        <button class="navbar-link" routerLink="/about" mat-button>About</button>
+      </div>
+      <div fxFlex></div>
+      <div *ngIf="isLoggedIn">
+        <button class="navbar-link" (click)="signout()" mat-button>Sign out</button>
+      </div>
+    </mat-toolbar>
+  </nav>
+  <!-- main content -->
+  <div fxFlex>
+    <main class="main-content" fxFlex="100%;">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <!-- footer -->
+  <div fxFlex>
+    <footer class="footer">
+      <mat-toolbar class="footer-content">
+        <p>
+          &copy; {{year | date: 'yyyy'}} - nodebucket - <a href="https://www.bellevue.edu/" class="bu-link" target="_blank">Bellevue University</a>
+        </p>
+      </mat-toolbar>
+    </footer>
+  </div>
+</div>
